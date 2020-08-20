@@ -2,7 +2,13 @@
 ### LOGIC ####
 ##############
 
-## Get a basic shiny  instance up and running
+## Get a basic shiny instance up and running with a postgreSQL database connection
+
+
+## IMPORTANT ##
+
+# << THIS APP WILL NOT LAUNCH UNTIL VALID  >>
+# << CREDENTIALS ARE PASSED TO db_con.R    >>
 
 
 #############
@@ -24,16 +30,16 @@ options(dplyr.print_max = 1e9)
 
 
 # DB Con...
-# library(RPostgreSQL)
-# library(DBI)
-# library(pool)
+library(RPostgreSQL)
+library(DBI)
+library(pool)
 
 # Shiny stuff...
 library(shiny)
 library(shinyjs)
 library(shinythemes)
 # library(shinyWidgets)
-#library(shinyFiles)
+# library(shinyFiles)
 
 
 # The Tidyverse...
@@ -51,7 +57,7 @@ source("scripts/land_page.R")
 source("scripts/banner.R")
 source("scripts/banner_land.R")
 source("scripts/abcxyz.R")
-
+source("db_con.R")
 
 
 ###########
